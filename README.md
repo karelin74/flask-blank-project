@@ -49,7 +49,7 @@ poetry install
 python -m webapp.app
 ```
 
-Проект будет доступен по адресу: [localhost:5000](http://localhost:5000/).
+Проект будет доступен по адресу: [localhost:5000](http://localhost:5001/).
 
 ### Запуск проекта с помощью Docker
 
@@ -59,7 +59,7 @@ python -m webapp.app
 docker compose up -d
 ```
 
-Проект будет доступен по адресу: [localhost:5000](http://localhost:5000/).
+Проект будет доступен по адресу: [localhost:5000](http://localhost:5001/).
 
 Остановка проекта (с отключением используемых томов):
 
@@ -97,8 +97,8 @@ docker system prune -a --volumes
 
 Обратите внимание на особенности более старых версий docker-compose:
 
-- Команда "docker compose" писалась через символ "минус" - docker-compose.
-- Перед командой `up` нужно было запускать команду `build` (либо `docker-compose up -d --build`).
+- Команда "docker compose" в зависимости от версии может писаться через символ "минус" - docker-compose.
+- В старых версиях перед командой `up` нужно было запускать команду `build` (либо использовать совмещенную команду: `docker-compose up -d --build`).
 - В очень старых версиях docker-compose нужно было устанавливать отдельно от Docker.
 
 Также может оказаться занятым порт `5001` - можно поменять до сборки в файле `compose.yml`.
@@ -144,5 +144,7 @@ flask-blank-project/
         ├── index.html
         └── page.html
 ```
+
+-----
 
 Спасибо за внимание! :)
