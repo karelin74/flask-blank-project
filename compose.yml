@@ -1,0 +1,24 @@
+services:
+
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - APPNAME=${APPNAME:?}
+        - WORKDIR=/${APPNAME:?}
+        - APPUID=${APPUID:?}
+        - APPGID=${APPGID:?}
+        - APPUSER=${APPNAME:?}
+        - APPGROUP=${APPNAME:?}
+    image: ${APPNAME:?}-image
+    container_name: ${APPNAME:?}
+    environment:
+      - TZ=${TZ:-Europe/Moscow}
+    restart: unless-stopped
+    volumes:
+      - ./${APPNAME:?}:/${APPNAME:?}/${APPNAME:?}
+    ports:
+      - ${HOST_PORT:-5001}:${CONTAINER_PORT:-5000}
+    working_dir: /${APPNAME:?}
+    command: /${APPNAME:?}/.venv/bin/python -m ${APPNAME:?}.app

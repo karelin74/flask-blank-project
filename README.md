@@ -1,2 +1,9 @@
-# flask-blank-project
-Blank Flask project using best practices
+# Flask Blank Project
+
+Пустой проект Flask с использованием лучших практик.
+
+## Изменение названия проекта
+
+1. Переименовать папку "`webapp`"
+2. Заменить "`webapp`" в `/pyproject.toml`
+3. Заменить "`webapp`" в `/.env`
