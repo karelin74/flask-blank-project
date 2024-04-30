@@ -49,7 +49,7 @@ poetry install
 python -m webapp.app
 ```
 
-Проект будет доступен по адресу: [localhost:5000](http://localhost:5001/).
+Проект будет доступен по адресу: [localhost:5001](http://localhost:5001/).
 
 ### Запуск проекта с помощью Docker
 
@@ -59,7 +59,7 @@ python -m webapp.app
 docker compose up -d
 ```
 
-Проект будет доступен по адресу: [localhost:5000](http://localhost:5001/).
+Проект будет доступен по адресу: [localhost:5001](http://localhost:5001/).
 
 Остановка проекта (с отключением используемых томов):
 
