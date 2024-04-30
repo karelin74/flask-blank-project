@@ -75,7 +75,7 @@ docker compose down --volumes
 docker ps
 ```
 
-Подключение в контейнер:
+Подключение в контейнер (`container_id` можно получить командой `docker ps`):
 
 ```bash
 docker exec -ti <container_id> sh
